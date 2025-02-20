@@ -11,23 +11,20 @@ A Very Good Project created by Very Good CLI.
 
 ## Getting Started 🚀
 
-This project contains 3 flavors:
+This project contains 2 flavors:
 
-- development
-- staging
-- production
+- bloc
+- riverpod
 
 To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
 
 ```sh
-# Development
-$ flutter run --flavor development --target lib/main_development.dart
+# Bloc
+$ flutter run --flavor bloc --target lib/main_bloc.dart
 
-# Staging
-$ flutter run --flavor staging --target lib/main_staging.dart
+# Riverpod
+$ flutter run --flavor riverpod --target lib/main_riverpod.dart
 
-# Production
-$ flutter run --flavor production --target lib/main_production.dart
 ```
 
 _\*Spase Explorer works on iOS, Android, Web, and Windows._
@@ -90,7 +87,6 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     <key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
-		<string>es</string>
 	</array>
 
     ...
@@ -104,7 +100,6 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 ├── l10n
 │   ├── arb
 │   │   ├── app_en.arb
-│   │   └── app_es.arb
 ```
 
 2. Add the translated strings to each `.arb` file:
@@ -117,18 +112,6 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
-    }
-}
-```
-
-`app_es.arb`
-
-```arb
-{
-    "@@locale": "es",
-    "counterAppBarTitle": "Contador",
-    "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
     }
 }
 ```

@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="bloc" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="buildFlavor" value="bloc" />
+    <option name="filePath" value="$PROJECT_DIR$/lib/main_bloc.dart" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -74,20 +74,15 @@ android {
 
     flavorDimensions "default"
     productFlavors {
-        production {
-            dimension "default"
-            applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Spase Explorer"]
-        }
-        staging {
+        riverpod {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Spase Explorer"]
+            manifestPlaceholders = [appName: "Spase Explorer Riverpod"]
         }
-        development {
+        bloc {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Spase Explorer"]
+            manifestPlaceholders = [appName: "Spase Explorer Bloc"]
         }
     }
 
