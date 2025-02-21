@@ -13,7 +13,7 @@ A Very Good Project created by Very Good CLI.
 
 This project contains 2 flavors:
 
-- bloc
+- bloc  
 - riverpod
 
 To run the desired flavor either use the launch configuration in VSCode/Android Studio or use the following commands:
