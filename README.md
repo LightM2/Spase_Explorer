@@ -27,7 +27,7 @@ $ flutter run --flavor riverpod --target lib/main_riverpod.dart
 
 ```
 
-_\*Spase Explorer works on iOS, Android, Web, and Windows._
+_\*Spase Explorer works on Android, iOS and Web._
 
 ---
 
