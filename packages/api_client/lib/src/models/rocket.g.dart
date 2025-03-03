@@ -24,7 +24,7 @@ LauncherConfigListDto _$LauncherConfigListDtoFromJson(
       id: (json['id'] as num).toInt(),
       url: json['url'] as String,
       name: json['name'] as String,
-      fullNames: json['full_names'] as String,
+      fullNames: json['full_names'] as String?,
       variant: json['variant'] as String,
     );
 

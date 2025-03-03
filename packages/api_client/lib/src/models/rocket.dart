@@ -36,6 +36,6 @@ class LauncherConfigListDto {
   final String url;
   final String name;
   @JsonKey(name: 'full_names')
-  final String fullNames;
+  final String? fullNames;
   final String variant;
 }
