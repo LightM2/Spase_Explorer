@@ -47,7 +47,7 @@ class ArticleAuthorDto {
       _$ArticleAuthorDtoFromJson(json);
 
   final String name;
-  final ArticleAuthorSocials socials;
+  final ArticleAuthorSocials? socials;
 }
 
 @JsonSerializable()

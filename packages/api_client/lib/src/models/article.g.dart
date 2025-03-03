@@ -38,8 +38,10 @@ Map<String, dynamic> _$ArticleDtoToJson(ArticleDto instance) =>
 ArticleAuthorDto _$ArticleAuthorDtoFromJson(Map<String, dynamic> json) =>
     ArticleAuthorDto(
       name: json['name'] as String,
-      socials: ArticleAuthorSocials.fromJson(
-          json['socials'] as Map<String, dynamic>),
+      socials: json['socials'] == null
+          ? null
+          : ArticleAuthorSocials.fromJson(
+              json['socials'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$ArticleAuthorDtoToJson(ArticleAuthorDto instance) =>
