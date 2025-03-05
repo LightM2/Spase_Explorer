@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spase_explorer/core/design_system/design_system.dart';
+import 'package:spase_explorer/core/navigation/navigation.dart';
 import 'package:spase_explorer/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -10,13 +11,11 @@ class App extends StatelessWidget {
     final textTheme = createTextTheme(context);
     final theme = SpaseTheme(textTheme);
 
-    return MaterialApp(
+    return MaterialApp.router(
       theme: theme.dark(),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Spase Explorer')),
-      ),
+      routerConfig: SpaseRouter.router,
     );
   }
 }

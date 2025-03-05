@@ -27,12 +27,11 @@ dependencies:
   spase_logger:
     path: packages/spase_logger
   google_fonts: ^6.2.1
+  build_runner: ^2.4.9
+  flutter_gen_runner: ^5.4.0
 
 dev_dependencies:
   bloc_test: ^10.0.0
-  flutter_gen_runner: ^5.4.0
-  flutter_test:
-    sdk: flutter
   mocktail: ^1.0.4
   very_good_analysis: ^7.0.0
 
