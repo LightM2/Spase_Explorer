@@ -1,7 +1,19 @@
 {
-    "@@locale": "en",
-    "appBarTitle": "Spase Explorer",
-    "@appBarTitle": {
-        "description": "Text shown in the AppBar"
-    }
+  "@@locale": "en",
+  "appBarTitle": "Spase Explorer",
+  "@appBarTitle": {
+    "description": "Text shown in the AppBar"
+  },
+  "newsTab_title": "News",
+  "@newsTab_title": {
+    "description": "News tab title"
+  },
+  "launchesTab_title": "Launches",
+  "@launchesTab_title": {
+    "description": "Launches tab title"
+  },
+  "eventsTab_title": "Events",
+  "@eventsTab_title": {
+    "description": "Events tab title"
+  }
 }

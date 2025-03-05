@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:spase_explorer/core/navigation/routes.dart';
+import 'package:spase_explorer/core/navigation/navigation.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _newsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'newsShell');
@@ -18,7 +18,7 @@ abstract class SpaseRouter {
     routes: [
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
-          return Container();
+          return ScaffoldWithNestedNavigation(navigationShell: navigationShell);
         },
         branches: [
           StatefulShellBranch(
