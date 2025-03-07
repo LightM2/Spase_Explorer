@@ -49,7 +49,8 @@ class EventBasicDto {
 class EventInfoURLDto {
   EventInfoURLDto({
     required this.priority,
-    required this.url, this.source,
+    required this.url,
+    this.source,
     this.title,
     this.description,
     this.featureImage,

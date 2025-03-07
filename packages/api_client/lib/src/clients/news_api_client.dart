@@ -12,5 +12,5 @@ abstract class NewsApiClient {
   Future<ArticlesDto> getArticles();
 
   @GET('/v4/articles/{id}')
-  Future<ArticlesDto> getArticle(@Path('id') int id);
+  Future<ArticleDto> getArticle(@Path('id') int id);
 }

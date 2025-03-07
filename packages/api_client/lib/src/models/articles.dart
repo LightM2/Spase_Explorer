@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'articles.g.dart';
 
 @JsonSerializable()
-class ArticlesDto{
+class ArticlesDto {
   ArticlesDto({
     required this.count,
     required this.results,
@@ -19,5 +19,4 @@ class ArticlesDto{
   final String? next;
   final String? previous;
   final List<ArticleDto> results;
-
 }
