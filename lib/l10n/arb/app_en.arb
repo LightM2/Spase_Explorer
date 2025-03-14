@@ -15,5 +15,15 @@
   "eventsTab_title": "Events",
   "@eventsTab_title": {
     "description": "Events tab title"
+  },
+
+  "news_author_text": "By {author}",
+  "@news_author_text": {
+    "description": "News author text",
+    "placeholders": {
+      "author": {
+        "type": "String"
+      }
+    }
   }
 }
