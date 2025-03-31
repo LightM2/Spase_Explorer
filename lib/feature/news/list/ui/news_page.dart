@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:spase_explorer/core/models/models.dart';
-import 'package:spase_explorer/feature/news/list/ui/mobile_news_card.dart';
+import 'package:spase_explorer/feature/news/list/ui/mobile_news_screen.dart';
+import 'package:spase_explorer/feature/news/list/ui/web_news_screen.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class NewsPage extends StatelessWidget {
+  const NewsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,23 +25,9 @@ class NewsScreen extends StatelessWidget {
       featured: false,
     );
 
-    return Scaffold(
-      body: ListView.separated(
-        shrinkWrap: true,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 12,
-        ),
-        itemBuilder: (context, index) => Builder(
-          builder: (context) {
-            return MobileNewsCard(
-              article: article,
-              onTap: () {},
-            );
-          },
-        ),
-        separatorBuilder: (context, _) => const Gap(8),
-        itemCount: 10,
-      ),
-    );
+    final isLarge = MediaQuery.of(context).size.width > 600;
+    return isLarge
+        ? WebNewsScreen(article: article)
+        : MobileNewsScreen(article: article);
   }
 }

@@ -25,5 +25,9 @@
         "type": "String"
       }
     }
+  },
+  "news_web_title": "Latest Space News",
+  "@news_web_title": {
+    "description": "News web title"
   }
 }
