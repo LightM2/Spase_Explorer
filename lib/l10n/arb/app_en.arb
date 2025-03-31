@@ -15,5 +15,19 @@
   "eventsTab_title": "Events",
   "@eventsTab_title": {
     "description": "Events tab title"
+  },
+
+  "news_author_text": "By {author}",
+  "@news_author_text": {
+    "description": "News author text",
+    "placeholders": {
+      "author": {
+        "type": "String"
+      }
+    }
+  },
+  "news_web_title": "Latest Space News",
+  "@news_web_title": {
+    "description": "News web title"
   }
 }

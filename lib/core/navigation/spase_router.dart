@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spase_explorer/core/navigation/navigation.dart';
+import 'package:spase_explorer/feature/news/list/ui/news_page.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _newsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'newsShell');
@@ -28,9 +29,7 @@ abstract class SpaseRouter {
                 path: SpaseRoutes.news.path,
                 name: SpaseRoutes.news.name,
                 pageBuilder: (context, state) => const NoTransitionPage(
-                  child: Scaffold(
-                    body: Center(child: Text('News')),
-                  ),
+                  child: NewsPage(),
                 ),
                 routes: [
                   GoRoute(
