@@ -6,11 +6,11 @@ import 'package:spase_explorer/l10n/l10n.dart';
 
 class WebNewsScreen extends StatelessWidget {
   const WebNewsScreen({
-    required this.article,
+    required this.articles,
     super.key,
   });
 
-  final Article article;
+  final List<Article> articles;
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +40,11 @@ class WebNewsScreen extends StatelessWidget {
                   ),
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  children: List.generate(20, (i) {
-                    return WebNewsCard(article: article, onTap: () {});
+                  children: List.generate(articles.length, (i) {
+                    return WebNewsCard(
+                      article: articles[i],
+                      onTap: () {},
+                    );
                   }),
                 ),
               ),

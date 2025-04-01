@@ -5,11 +5,11 @@ import 'package:spase_explorer/feature/news/list/ui/mobile_news_card.dart';
 
 class MobileNewsScreen extends StatelessWidget {
   const MobileNewsScreen({
-    required this.article,
+    required this.articles,
     super.key,
   });
 
-  final Article article;
+  final List<Article> articles;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +22,13 @@ class MobileNewsScreen extends StatelessWidget {
         itemBuilder: (context, index) => Builder(
           builder: (context) {
             return MobileNewsCard(
-              article: article,
+              article: articles[index],
               onTap: () {},
             );
           },
         ),
         separatorBuilder: (context, _) => const Gap(8),
-        itemCount: 10,
+        itemCount: articles.length,
       ),
     );
   }

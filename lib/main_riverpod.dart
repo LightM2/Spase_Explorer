@@ -1,6 +1,7 @@
 import 'package:api_client/api_client.dart';
 import 'package:spase_explorer/app/app.dart';
 import 'package:spase_explorer/bootstrap.dart';
+import 'package:spase_explorer/core/repositories/repositories.dart';
 import 'package:spase_logger/spase_logger.dart';
 
 void main() {
@@ -12,7 +13,9 @@ void main() {
       final eventsDio = const DioFactory(eventsBaseUrl).create();
       final eventsApiClient = EventsApiClient(eventsDio);
 
-      return const App();
+      final newsRepository = NewsRepository(apiClient: newsApiClient);
+
+      return App(newsRepository: newsRepository);
     },
   );
 }
