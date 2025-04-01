@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spase_explorer/core/navigation/navigation.dart';
+import 'package:spase_explorer/core/repositories/repositories.dart';
+import 'package:spase_explorer/feature/news/list/cubit/news_cubit.dart';
 import 'package:spase_explorer/feature/news/list/ui/news_page.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -28,8 +31,11 @@ abstract class SpaseRouter {
               GoRoute(
                 path: SpaseRoutes.news.path,
                 name: SpaseRoutes.news.name,
-                pageBuilder: (context, state) => const NoTransitionPage(
-                  child: NewsPage(),
+                builder: (context, state) => BlocProvider(
+                  create: (context) => NewsListCubit(
+                    context.read<NewsRepository>(),
+                  )..fetchNewsList(),
+                  child: const NewsPage(),
                 ),
                 routes: [
                   GoRoute(
